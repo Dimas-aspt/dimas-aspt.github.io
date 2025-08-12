@@ -138,12 +138,12 @@
             const heroSubtitle = document.querySelector('.hero .subtitle');
             
             if (heroTitle) {
-                typeWriter(heroTitle, 'Nama Anda', 150);
+                typeWriter(heroTitle, 'Dimas Adisaputra', 150);
             }
             
             setTimeout(() => {
                 if (heroSubtitle) {
-                    typeWriter(heroSubtitle, 'Web Developer & Designer', 80);
+                    typeWriter(heroSubtitle, 'Full Stack Web Developer', 80);
                 }
             }, 1000);
         }, 2000);
