@@ -18,9 +18,9 @@
         <div class="nav-container">
             <div class="logo">Portfolio</div>
             <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
             </div>
         </div>
     </nav>
@@ -40,6 +40,15 @@
     <div class="main-content" id="main-content">
         <!-- Hero Section -->
         <section class="hero" id="home">
+            <div class="hero-bg">
+                <div class="floating-shapes">
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                </div>
+                <div class="particles" id="particles"></div>
+            </div>
             <div class="hero-content">
                 <h1>Dimas Adisaputra</h1>
                 <p class="subtitle">Full Stack Web Developer</p>
@@ -48,18 +57,14 @@
         </section>
 
         <!-- About Section -->
-        <section class="section about" id="about">
+        <section class="section about fade-in" id="about">
             <div class="container">
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
                     <div class="about-image">
-                        👨‍💻
+                        <img src="assets/dimas.jpg" alt="Dimas Adisaputra">
                     </div>
                     <div class="about-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta reprehenderit voluptas nulla suscipit pariatur atque provident asperiores rerum excepturi quo! Quisquam dolorem tempore ad veritatis id architecto aspernatur itaque ipsam ullam, dolores ea deleniti eaque odio numquam placeat fuga perferendis unde culpa. Obcaecati deserunt numquam dolore doloribus et earum ad.</p>
-                        
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi distinctio saepe ipsa consequatur corporis soluta, tempora numquam, aperiam fugiat eveniet nesciunt accusantium quae, non aliquid ab exercitationem nam libero ipsum!</p>
-                        
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos blanditiis esse sint accusamus asperiores fugiat similique commodi. Ut architecto est aperiam maxime velit recusandae. Molestiae aut, quos minus reiciendis aperiam repellat quo et qui error cupiditate blanditiis numquam placeat voluptatum autem iste nam sequi ullam mollitia. Nobis maxime maiores alias.</p>
                     </div>
                 </div>
@@ -67,7 +72,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section class="section skills" id="skills">
+        <section class="section skills fade-in" id="skills">
             <div class="container">
                 <h2 class="section-title">Skills</h2>
                 <div class="skills-grid">
@@ -148,15 +153,17 @@
         </section>
 
         <!-- Projects Section -->
-        <section class="section projects" id="projects">
+        <section class="section projects fade-in" id="projects">
             <div class="container">
                 <h2 class="section-title">My Project</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <div class="project-image">🛍️</div>
+                        <div class="project-image">
+                            <img src="assets/firebase.png" alt="E-Commerce Platform">
+                        </div>
                         <div class="project-content">
                             <h3 class="project-title">E-Commerce Platform</h3>
-                            <p class="project-description">Platform e-commerce modern dengan fitur keranjang belanja, sistem pembayaran online, dashboard admin yang lengkap, dan manajemen inventory real-time.</p>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aliquid voluptatibus obcaecati ducimus impedit provident quibusdam, qui dolorum? Autem hic officiis nobis! Id impedit debitis omnis nemo consequatur magnam aspernatur?</p>
                             <div class="tech-stack">
                                 <h4>Tech Stack:</h4>
                                 <div class="tech-tags">
@@ -170,10 +177,12 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-image">📱</div>
+                        <div class="project-image">
+                            <img src="assets/firebase.png" alt="Mobile App Landing Page">
+                        </div>
                         <div class="project-content">
                             <h3 class="project-title">Mobile App Landing Page</h3>
-                            <p class="project-description">Landing page responsif untuk aplikasi mobile dengan animasi menarik, call-to-action yang efektif, dan optimasi konversi tinggi.</p>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aliquid voluptatibus obcaecati ducimus impedit provident quibusdam, qui dolorum? Autem hic officiis nobis! Id impedit debitis omnis nemo consequatur magnam aspernatur?</p>
                             <div class="tech-stack">
                                 <h4>Tech Stack:</h4>
                                 <div class="tech-tags">
@@ -186,10 +195,12 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <div class="project-image">💼</div>
+                        <div class="project-image">
+                            <img src="assets/firebase.png" alt="Corporate CMS Website">
+                        </div>
                         <div class="project-content">
                             <h3 class="project-title">Corporate CMS Website</h3>
-                            <p class="project-description">Website perusahaan dengan sistem manajemen konten custom, dukungan multi-bahasa, optimasi SEO, dan dashboard admin yang user-friendly.</p>
+                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aliquid voluptatibus obcaecati ducimus impedit provident quibusdam, qui dolorum? Autem hic officiis nobis! Id impedit debitis omnis nemo consequatur magnam aspernatur?</p>
                             <div class="tech-stack">
                                 <h4>Tech Stack:</h4>
                                 <div class="tech-tags">
@@ -207,9 +218,9 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="section contact" id="contact">
+        <section class="section contact fade-in" id="contact">
             <div class="container">
-                <h2 class="section-title">Contact</h2>
+                <h2 class="section-title">Let's Connect !</h2>
                 <div class="contact-content">
                     <form class="contact-form" id="contact-form">
                         <div class="form-group">
@@ -229,21 +240,27 @@
                     
                     <div class="contact-info">
                         <div class="contact-item">
-                            <div class="contact-icon">📧</div>
+                            <div class="contact-icon">
+                                <img src="assets/mail.png" alt="Email" class="contact-icon-img">
+                            </div>
                             <div class="contact-details">
                                 <h4>Email</h4>
                                 <p>dimasaspt1@email.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">📱</div>
+                            <div class="contact-icon">
+                                <img src="assets/phone.png" alt="Phone" class="contact-icon-img">
+                            </div>
                             <div class="contact-details">
                                 <h4>Phone Number</h4>
                                 <p>0812 2797 0111</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">📍</div>
+                            <div class="contact-icon">
+                                <img src="assets/location.png" alt="Location" class="contact-icon-img">
+                            </div>
                             <div class="contact-details">
                                 <h4>Location</h4>
                                 <p>Tangerang, Indonesia</p>
