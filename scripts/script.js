@@ -1,3 +1,8 @@
+// EmailJS Configuration
+(function () {
+  emailjs.init("VSwMO_6vBF9SXnvee");
+})();
+
 // Create particles dynamically
 function createParticles() {
   const particlesContainer = document.getElementById("particles");
@@ -118,24 +123,100 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Form submission
+// Enhanced Form Submission with EmailJS
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const formData = new FormData(this);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
+    const submitBtn = document.getElementById("submit-btn");
+    const btnText = submitBtn.querySelector(".btn-text");
+    const btnLoading = submitBtn.querySelector(".btn-loading");
 
-    if (name && email && message) {
-      alert("Terima kasih! Pesan Anda telah terkirim.");
-      this.reset();
-    } else {
-      alert("Mohon lengkapi semua field.");
-    }
+    // Show loading state
+    if (btnText) btnText.style.display = "none";
+    if (btnLoading) btnLoading.style.display = "inline";
+    submitBtn.disabled = true;
+
+    // Send email using EmailJS
+    emailjs
+      .sendForm("service_ql8k7j9", "template_dx20h89", this)
+      .then(() => {
+        showNotification(
+          "success",
+          "Message Sent!",
+          "Thank you! Your message has been successfully sent. I will respond to you shortly."
+        );
+        this.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        showNotification(
+          "error",
+          "Failed to Send",
+          "Sorry, there was an error sending your message. Please try again or contact me directly via email."
+        );
+      })
+      .finally(() => {
+        // Reset button state
+        if (btnText) btnText.style.display = "inline";
+        if (btnLoading) btnLoading.style.display = "none";
+        submitBtn.disabled = false;
+      });
   });
+
+// Notification Modal Functions
+function showNotification(type, title, message) {
+  const modal = document.getElementById("notification-modal");
+  const modalIcon = document.getElementById("modal-icon");
+  const modalTitle = document.getElementById("modal-title");
+  const modalMessage = document.getElementById("modal-message");
+
+  if (!modal) return; // Safety check
+
+  // Set content
+  if (modalTitle) modalTitle.textContent = title;
+  if (modalMessage) modalMessage.textContent = message;
+
+  // Set icon based on type
+  if (modalIcon) {
+    if (type === "success") {
+      modalIcon.innerHTML = "✓";
+      modalIcon.className = "modal-icon success";
+    } else {
+      modalIcon.innerHTML = "✗";
+      modalIcon.className = "modal-icon error";
+    }
+  }
+
+  // Show modal
+  modal.style.display = "flex";
+  setTimeout(() => modal.classList.add("show"), 10);
+}
+
+function closeNotification() {
+  const modal = document.getElementById("notification-modal");
+  if (!modal) return;
+  
+  modal.classList.remove("show");
+  setTimeout(() => (modal.style.display = "none"), 300);
+}
+
+// Close modal events - with safety checks
+document.addEventListener("DOMContentLoaded", function() {
+  const closeBtn = document.getElementById("close-modal");
+  const modal = document.getElementById("notification-modal");
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeNotification);
+  }
+
+  if (modal) {
+    modal.addEventListener("click", function (e) {
+      if (e.target === this) closeNotification();
+    });
+  }
+});
 
 // Animate elements on scroll
 const animationObserver = new IntersectionObserver(
