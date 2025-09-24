@@ -3,15 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio - Dimas Adisaputra</title>
+    <title>Dimas Adisaputra - Full Stack Web Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Dimas Adisaputra - Passionate Full Stack Web Developer specializing in Node.js, React, and PostgreSQL. Explore my projects and skills."
+    />
+    <meta
+      name="keywords"
+      content="Full Stack Developer, Web Developer, Node.js, React, Portfolio"
+    />
+    <meta name="author" content="Dimas Adisaputra" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Dimas Adisaputra - Full Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio of Dimas Adisaputra - Full Stack Web Developer"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/dimas.jpg" />
+
+    <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
     <!-- EmailJS SDK -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dimas Adisaputra",
+        "jobTitle": "Full Stack Web Developer",
+        "url": "https://dimas-aspt.github.io",
+        "sameAs": [
+          "https://www.linkedin.com/in/dimas-adisaputra-28935325a/",
+          "https://github.com/dimas-aspt",
+          "https://instagram.com/dimas.aspt"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tangerang",
+          "addressCountry": "Indonesia"
+        },
+        "knowsAbout": [
+          "JavaScript",
+          "Node.js",
+          "React",
+          "PostgreSQL",
+          "Full Stack Development"
+        ],
+        "description": "Passionate Full Stack Web Developer specializing in Node.js, React, and PostgreSQL"
+      }
+    </script>
   </head>
+
   <body>
+    <div class="page-progress" id="page-progress"></div>
+
+    <!-- Skip link untuk accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Splash Screen -->
     <div class="splash-screen" id="splash-screen">
       <div class="splash-logo">Hello World!</div>
@@ -22,7 +78,7 @@
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <div class="logo">Portfolio</div>
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu">
           <div class="hamburger-line"></div>
           <div class="hamburger-line"></div>
           <div class="hamburger-line"></div>
@@ -57,7 +113,17 @@
         <div class="hero-content">
           <h1>Dimas Adisaputra</h1>
           <p class="subtitle">Full Stack Web Developer</p>
-          <a href="#about" class="cta-button">Learn More</a>
+          <div class="hero-buttons">
+            <a href="#about" class="cta-button">Learn More</a>
+            <!-- Download CV Button -->
+            <a
+              href="assets/cv-dimas-adisaputra.pdf"
+              class="cta-button secondary"
+              download="CV-Dimas-Adisaputra.pdf"
+            >
+              Download CV
+            </a>
+          </div>
         </div>
       </section>
 
@@ -67,7 +133,14 @@
           <h2 class="section-title">About Me</h2>
           <div class="about-content">
             <div class="about-image">
-              <img src="assets/dimas.jpg" alt="Dimas Adisaputra" />
+              <img
+                loading="lazy"
+                src="assets/dimas.jpg"
+                alt="Dimas Adisaputra - Full Stack Developer"
+                width="300"
+                height="300"
+                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjMUUxRTFFIi8+CjxwYXRoIGQ9Ik0xNTAgMTAwQzEyNS4yIDEwMCAxMDUgMTIwLjIgMTA1IDE0NUMxMDUgMTY5LjggMTI1LjIgMTkwIDE1MCAxOTBDMTc0LjggMTkwIDE5NSAxNjkuOCAxOTUgMTQ1QzE5NSAxMjAuMiAxNzQuOCAxMDAgMTUwIDEwMFoiIGZpbGw9IiM0RTRFNjYiLz4KPHBhdGggZD0iTTE1MCAyMjBDMTMwLjUgMjIwIDExNCAyMzYuNSAxMTQgMjU2VjI3MEgxODZWMjU2QzE4NiAyMzYuNSAxNjkuNSAyMjAgMTUwIDIyMFoiIGZpbGw9IiM0RTRFNjYiLz4KPC9zdmc+Cg=='"
+              />
             </div>
             <div class="about-text">
               <p>
@@ -96,73 +169,157 @@
           <div class="skills-grid">
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/html.png" alt="HTML" />
+                <img
+                  loading="lazy"
+                  src="assets/html.png"
+                  alt="HTML"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">HTML</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/css.png" alt="CSS" />
+                <img
+                  loading="lazy"
+                  src="assets/css.png"
+                  alt="CSS"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">CSS</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/js.png" alt="JavaScript" />
+                <img
+                  loading="lazy"
+                  src="assets/js.png"
+                  alt="JavaScript"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">JavaScript</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/react.png" alt="React" />
+                <img
+                  loading="lazy"
+                  src="assets/react.png"
+                  alt="React"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">React</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/nodejs.png" alt="Node" />
+                <img
+                  loading="lazy"
+                  src="assets/nodejs.png"
+                  alt="Node.js"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">Node.js</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/express.png" alt="Express" />
+                <img
+                  loading="lazy"
+                  src="assets/express.png"
+                  alt="Express"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">Express</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/vite.png" alt="Vite" />
+                <img
+                  loading="lazy"
+                  src="assets/vite.png"
+                  alt="Vite"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">Vite</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/firebase.png" alt="Firebase" />
+                <img
+                  loading="lazy"
+                  src="assets/firebase.png"
+                  alt="Firebase"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">Firebase</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/postgresql.png" alt="PostgreSQL" />
+                <img
+                  loading="lazy"
+                  src="assets/postgresql.png"
+                  alt="PostgreSQL"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">PostgreSQL</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/git.png" alt="Git" />
+                <img
+                  loading="lazy"
+                  src="assets/git.png"
+                  alt="Git"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">Git</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/figma.png" alt="Figma" />
+                <img
+                  loading="lazy"
+                  src="assets/figma.png"
+                  alt="Figma"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">Figma</h3>
             </div>
             <div class="skill-item">
               <div class="skill-logo">
-                <img src="assets/postman.png" alt="Postman" />
+                <img
+                  loading="lazy"
+                  src="assets/postman.png"
+                  alt="Postman"
+                  width="60"
+                  height="60"
+                  onerror="this.style.display='none'"
+                />
               </div>
               <h3 class="skill-name">Postman</h3>
             </div>
@@ -178,8 +335,12 @@
             <div class="project-card">
               <div class="project-image">
                 <img
+                  loading="lazy"
                   src="assets/inventory.png"
-                  alt="Inventory Management Website"
+                  alt="Inventory Management Website Dashboard"
+                  width="400"
+                  height="200"
+                  onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDQwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMUUxRTFFIi8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjN0U3RTdFIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+Cjwvc3ZnPgo='"
                 />
               </div>
               <div class="project-content">
@@ -197,7 +358,7 @@
                   <div class="tech-tags">
                     <span class="tech-tag">HTML</span>
                     <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">Javascript</span>
+                    <span class="tech-tag">JavaScript</span>
                     <span class="tech-tag">Node.js</span>
                     <span class="tech-tag">PostgreSQL</span>
                     <span class="tech-tag">Express</span>
@@ -207,7 +368,14 @@
             </div>
             <div class="project-card">
               <div class="project-image">
-                <img src="assets/accentwall.png" alt="Ecommerce Website" />
+                <img
+                  loading="lazy"
+                  src="assets/accentwall.png"
+                  alt="Ecommerce Website"
+                  width="400"
+                  height="200"
+                  onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDQwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMUUxRTFFIi8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjN0U3RTdFIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+Cjwvc3ZnPgo='"
+                />
               </div>
               <div class="project-content">
                 <h3 class="project-title">E-Commerce Website</h3>
@@ -223,7 +391,7 @@
                   <div class="tech-tags">
                     <span class="tech-tag">HTML</span>
                     <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">Javascript</span>
+                    <span class="tech-tag">JavaScript</span>
                     <span class="tech-tag">Firebase</span>
                   </div>
                 </div>
@@ -232,8 +400,12 @@
             <div class="project-card">
               <div class="project-image">
                 <img
+                  loading="lazy"
                   src="assets/payuliving.png"
                   alt="Landing Page Payu Living"
+                  width="400"
+                  height="200"
+                  onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDQwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMUUxRTFFIi8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjN0U3RTdFIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+Cjwvc3ZnPgo='"
                 />
               </div>
               <div class="project-content">
@@ -250,7 +422,7 @@
                     <span class="tech-tag">HTML</span>
                     <span class="tech-tag">CSS</span>
                     <span class="tech-tag">Bootstrap</span>
-                    <span class="tech-tag">Javascript</span>
+                    <span class="tech-tag">JavaScript</span>
                     <span class="tech-tag">Firebase</span>
                   </div>
                 </div>
@@ -258,22 +430,30 @@
             </div>
             <div class="project-card">
               <div class="project-image">
-                <img src="assets/uteen.png" alt="Corporate CMS Website" />
+                <img
+                  loading="lazy"
+                  src="assets/uteen.png"
+                  alt="Canteen Ordering Mobile Application Prototype"
+                  width="400"
+                  height="200"
+                  onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDQwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMUUxRTFFIi8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjN0U3RTdFIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiPkltYWdlIG5vdCBhdmFpbGFibGU8L3RleHQ+Cjwvc3ZnPgo='"
+                />
               </div>
               <div class="project-content">
                 <h3 class="project-title">
                   Prototyping Canteen Ordering Mobile Application
                 </h3>
                 <p class="project-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                  aliquid voluptatibus obcaecati ducimus impedit provident
-                  quibusdam, qui dolorum? Autem hic officiis nobis! Id impedit
-                  debitis omnis nemo consequatur magnam aspernatur?
+                  Designed and prototyped a mobile application for canteen ordering system 
+                  using Figma. The prototype includes user authentication, menu browsing, 
+                  order placement, and payment integration features.
                 </p>
                 <div class="tech-stack">
                   <h4>Tech Stack:</h4>
                   <div class="tech-tags">
                     <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">UI/UX Design</span>
+                    <span class="tech-tag">Prototyping</span>
                   </div>
                 </div>
               </div>
@@ -285,12 +465,13 @@
       <!-- Contact Section -->
       <section class="section contact fade-in" id="contact">
         <div class="container">
-          <h2 class="section-title">Let's Connect !</h2>
+          <h2 class="section-title">Let's Connect!</h2>
           <div class="contact-content">
-            <form class="contact-form" id="contact-form">
+            <form class="contact-form" id="contact-form" novalidate>
               <div class="form-group">
                 <label for="from_name">Name</label>
-                <input type="text" id="from_name" name="from_name" required />
+                <input type="text" id="from_name" name="from_name" required minlength="2" />
+                <span class="error-message" id="name-error"></span>
               </div>
               <div class="form-group">
                 <label for="from_email">Email</label>
@@ -300,21 +481,22 @@
                   name="from_email"
                   required
                 />
+                <span class="error-message" id="email-error"></span>
               </div>
               <div class="form-group">
-                <label for="message">Messages</label>
+                <label for="message">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   rows="5"
                   required
+                  minlength="10"
                 ></textarea>
+                <span class="error-message" id="message-error"></span>
               </div>
               <button type="submit" class="submit-btn" id="submit-btn">
-                <span class="btn-text">Send Messages</span>
-                <span class="btn-loading" style="display: none"
-                  >Sending...</span
-                >
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading" style="display: none">Sending...</span>
               </button>
             </form>
 
@@ -322,9 +504,13 @@
               <div class="contact-item">
                 <div class="contact-icon">
                   <img
+                    loading="lazy"
                     src="assets/mail.png"
-                    alt="Email"
+                    alt="Email icon"
                     class="contact-icon-img"
+                    width="24"
+                    height="24"
+                    onerror="this.style.display='none'"
                   />
                 </div>
                 <div class="contact-details">
@@ -335,9 +521,13 @@
               <div class="contact-item">
                 <div class="contact-icon">
                   <img
+                    loading="lazy"
                     src="assets/phone.png"
                     alt="Phone"
                     class="contact-icon-img"
+                    width="24"
+                    height="24"
+                    onerror="this.style.display='none'"
                   />
                 </div>
                 <div class="contact-details">
@@ -348,14 +538,35 @@
               <div class="contact-item">
                 <div class="contact-icon">
                   <img
+                    loading="lazy"
                     src="assets/location.png"
                     alt="Location"
                     class="contact-icon-img"
+                    width="24"
+                    height="24"
+                    onerror="this.style.display='none'"
                   />
                 </div>
                 <div class="contact-details">
                   <h4>Location</h4>
                   <p>Tangerang, Indonesia</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <img
+                    loading="lazy"
+                    src="assets/calendar.png"
+                    alt="Schedule"
+                    class="contact-icon-img"
+                    width="24"
+                    height="24"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
+                <div class="contact-details">
+                  <h4>Availability</h4>
+                  <p>Open to new opportunities</p>
                 </div>
               </div>
 
@@ -367,11 +578,13 @@
                     href="https://www.linkedin.com/in/dimas-adisaputra-28935325a/"
                     target="_blank"
                     class="social-link"
+                    rel="noopener noreferrer"
                   >
                     <img
                       src="assets/linkedin.png"
                       alt="LinkedIn"
                       class="social-icon"
+                      onerror="this.style.display='none'"
                     />
                     <span>LinkedIn</span>
                   </a>
@@ -379,11 +592,13 @@
                     href="https://github.com/dimas-aspt"
                     target="_blank"
                     class="social-link"
+                    rel="noopener noreferrer"
                   >
                     <img
                       src="assets/github.png"
                       alt="GitHub"
                       class="social-icon"
+                      onerror="this.style.display='none'"
                     />
                     <span>GitHub</span>
                   </a>
@@ -391,11 +606,13 @@
                     href="https://instagram.com/dimas.aspt"
                     target="_blank"
                     class="social-link"
+                    rel="noopener noreferrer"
                   >
                     <img
                       src="assets/instagram.png"
                       alt="Instagram"
                       class="social-icon"
+                      onerror="this.style.display='none'"
                     />
                     <span>Instagram</span>
                   </a>
@@ -404,6 +621,7 @@
                       src="assets/discord.png"
                       alt="Discord"
                       class="social-icon"
+                      onerror="this.style.display='none'"
                     />
                     <span>Discord</span>
                     <div class="discord-tooltip">Click to copy username</div>
@@ -424,9 +642,9 @@
     </div>
 
     <!-- Modal Notification -->
-    <div class="modal" id="notification-modal" style="display: none">
+    <div class="modal" id="notification-modal">
       <div class="modal-content">
-        <span class="close-modal" id="close-modal">&times;</span>
+        <span class="close-modal" id="close-modal" aria-label="Close modal">&times;</span>
         <div class="modal-body">
           <div class="modal-icon" id="modal-icon"></div>
           <h3 id="modal-title"></h3>
@@ -434,6 +652,8 @@
         </div>
       </div>
     </div>
+
+    <button class="back-to-top" id="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
 
     <script src="scripts/script.js"></script>
   </body>
