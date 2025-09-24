@@ -1,317 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio - Dimas Adisaputra</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-</head>
-<body>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
     <!-- Splash Screen -->
     <div class="splash-screen" id="splash-screen">
-        <div class="splash-logo">Hello World!</div>
-        <div class="splash-loader"></div>
+      <div class="splash-logo">Hello World!</div>
+      <div class="splash-loader"></div>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="logo">Portfolio</div>
-            <div class="hamburger" id="hamburger">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </div>
+      <div class="nav-container">
+        <div class="logo">Portfolio</div>
+        <div class="hamburger" id="hamburger">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
         </div>
+      </div>
     </nav>
 
     <!-- Fullscreen Menu -->
     <div class="fullscreen-menu" id="fullscreen-menu">
-        <div class="menu-items">
-            <a href="#home" class="menu-link">Home</a>
-            <a href="#about" class="menu-link">About</a>
-            <a href="#skills" class="menu-link">Skills</a>
-            <a href="#projects" class="menu-link">Projects</a>
-            <a href="#contact" class="menu-link">Contact</a>
-        </div>
+      <div class="menu-items">
+        <a href="#home" class="menu-link">Home</a>
+        <a href="#about" class="menu-link">About</a>
+        <a href="#skills" class="menu-link">Skills</a>
+        <a href="#projects" class="menu-link">Projects</a>
+        <a href="#contact" class="menu-link">Contact</a>
+      </div>
     </div>
 
     <!-- Main Content -->
     <div class="main-content" id="main-content">
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero-bg">
-                <div class="floating-shapes">
-                    <div class="shape"></div>
-                    <div class="shape"></div>
-                    <div class="shape"></div>
-                    <div class="shape"></div>
-                </div>
-                <div class="particles" id="particles"></div>
-            </div>
-            <div class="hero-content">
-                <h1>Dimas Adisaputra</h1>
-                <p class="subtitle">Full Stack Web Developer</p>
-                <a href="#about" class="cta-button">Learn More</a>
-            </div>
-        </section>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="hero-bg">
+          <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+          </div>
+          <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+          <h1>Dimas Adisaputra</h1>
+          <p class="subtitle">Full Stack Web Developer</p>
+          <a href="#about" class="cta-button">Learn More</a>
+        </div>
+      </section>
 
-        <!-- About Section -->
-        <section class="section about fade-in" id="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-image">
-                        <img src="assets/dimas.jpg" alt="Dimas Adisaputra">
-                    </div>
-                    <div class="about-text">
-                        <p>I am a passionate and adaptable Full Stack Developer with a deep fascination for the entire journey of data within an application—from how it's captured on the frontend to how it's processed, stored, and managed on the backend. My core strength lies in building robust server-side systems using Node.js, Express, and PostgreSQL. I am a rapid learner, consistently eager to acquire new skills, which is currently driving my exploration of React, Vite, React Native, and PHP. My goal is to evolve into a versatile developer capable of crafting seamless web and mobile experiences, and I am excited to contribute my problem-solving skills and backend expertise to innovative projects.</p>
-                    </div>
-                </div>
+      <!-- About Section -->
+      <section class="section about fade-in" id="about">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <div class="about-image">
+              <img src="assets/dimas.jpg" alt="Dimas Adisaputra" />
             </div>
-        </section>
+            <div class="about-text">
+              <p>
+                I am a passionate and adaptable Full Stack Developer with a deep
+                fascination for the entire journey of data within an
+                application—from how it's captured on the frontend to how it's
+                processed, stored, and managed on the backend. My core strength
+                lies in building robust server-side systems using Node.js,
+                Express, and PostgreSQL. I am a rapid learner, consistently
+                eager to acquire new skills, which is currently driving my
+                exploration of React, Vite, React Native, and PHP. My goal is to
+                evolve into a versatile developer capable of crafting seamless
+                web and mobile experiences, and I am excited to contribute my
+                problem-solving skills and backend expertise to innovative
+                projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Skills Section -->
-        <section class="section skills fade-in" id="skills">
-            <div class="container">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/html.png" alt="HTML">
-                        </div>
-                        <h3 class="skill-name">HTML</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/css.png" alt="CSS">
-                        </div>
-                        <h3 class="skill-name">CSS</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/js.png" alt="JavaScript">
-                        </div>
-                        <h3 class="skill-name">JavaScript</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/react.png" alt="React">
-                        </div>
-                        <h3 class="skill-name">React</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/nodejs.png" alt="Node">
-                        </div>
-                        <h3 class="skill-name">Node.js</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/express.png" alt="Express">
-                        </div>
-                        <h3 class="skill-name">Express</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/vite.png" alt="Vite">
-                        </div>
-                        <h3 class="skill-name">Vite</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/firebase.png" alt="Firebase">
-                        </div>
-                        <h3 class="skill-name">Firebase</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/postgresql.png" alt="PostgreSQL">
-                        </div>
-                        <h3 class="skill-name">PostgreSQL</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/git.png" alt="Git">
-                        </div>
-                        <h3 class="skill-name">Git</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/figma.png" alt="Figma">
-                        </div>
-                        <h3 class="skill-name">Figma</h3>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-logo">
-                            <img src="assets/postman.png" alt="Postman">
-                        </div>
-                        <h3 class="skill-name">Postman</h3>
-                    </div>
-                </div>
+      <!-- Skills Section -->
+      <section class="section skills fade-in" id="skills">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/html.png" alt="HTML" />
+              </div>
+              <h3 class="skill-name">HTML</h3>
             </div>
-        </section>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/css.png" alt="CSS" />
+              </div>
+              <h3 class="skill-name">CSS</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/js.png" alt="JavaScript" />
+              </div>
+              <h3 class="skill-name">JavaScript</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/react.png" alt="React" />
+              </div>
+              <h3 class="skill-name">React</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/nodejs.png" alt="Node" />
+              </div>
+              <h3 class="skill-name">Node.js</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/express.png" alt="Express" />
+              </div>
+              <h3 class="skill-name">Express</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/vite.png" alt="Vite" />
+              </div>
+              <h3 class="skill-name">Vite</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/firebase.png" alt="Firebase" />
+              </div>
+              <h3 class="skill-name">Firebase</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/postgresql.png" alt="PostgreSQL" />
+              </div>
+              <h3 class="skill-name">PostgreSQL</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/git.png" alt="Git" />
+              </div>
+              <h3 class="skill-name">Git</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/figma.png" alt="Figma" />
+              </div>
+              <h3 class="skill-name">Figma</h3>
+            </div>
+            <div class="skill-item">
+              <div class="skill-logo">
+                <img src="assets/postman.png" alt="Postman" />
+              </div>
+              <h3 class="skill-name">Postman</h3>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Projects Section -->
-        <section class="section projects fade-in" id="projects">
-            <div class="container">
-                <h2 class="section-title">Main Project</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/inventory.png" alt="Inventory Management Website">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Advanced Inventory Management</h3>
-                            <p class="project-description">Developing an advanced inventory management system for stationery store SMEs (Small and Medium Enterprises). The system features sophisticated capabilities including user permission management, role-based access control, and comprehensive inventory analytics dashboard to support data-driven business decisions.</p>
-                            <div class="tech-stack">
-                                <h4>Tech Stack:</h4>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">HTML</span>
-                                    <span class="tech-tag">CSS</span>
-                                    <span class="tech-tag">Javascript</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">Express</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/accentwall.png" alt="Ecommerce Website">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">E-Commerce Website</h3>
-                            <p class="project-description">Developing a static e-commerce website for Accent Wall, a wood panel company. The website features a comprehensive product catalog with detailed product descriptions and integrated WhatsApp-based sales system for streamlined customer transactions.</p>
-                            <div class="tech-stack">
-                                <h4>Tech Stack:</h4>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">HTML</span>
-                                    <span class="tech-tag">CSS</span>
-                                    <span class="tech-tag">Javascript</span>
-                                    <span class="tech-tag">Firebase</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/payuliving.png" alt="Landing Page Payu Living">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Landing Page Website</h3>
-                            <p class="project-description">Building a landing page to showcase Payu Living's brand portfolio, featuring affiliated brands and key competitive advantages to effectively communicate the company's value proposition to potential customers.</p>
-                            <div class="tech-stack">
-                                <h4>Tech Stack:</h4>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">HTML</span>
-                                    <span class="tech-tag">CSS</span>
-                                    <span class="tech-tag">Bootstrap</span>
-                                    <span class="tech-tag">Javascript</span>
-                                    <span class="tech-tag">Firebase</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/uteen.png" alt="Corporate CMS Website">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Prototyping Canteen Ordering Mobile Application</h3>
-                            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aliquid voluptatibus obcaecati ducimus impedit provident quibusdam, qui dolorum? Autem hic officiis nobis! Id impedit debitis omnis nemo consequatur magnam aspernatur?</p>
-                            <div class="tech-stack">
-                                <h4>Tech Stack:</h4>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Figma</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Projects Section -->
+      <section class="section projects fade-in" id="projects">
+        <div class="container">
+          <h2 class="section-title">Main Project</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="assets/inventory.png"
+                  alt="Inventory Management Website"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Advanced Inventory Management</h3>
+                <p class="project-description">
+                  Developing an advanced inventory management system for
+                  stationery store SMEs (Small and Medium Enterprises). The
+                  system features sophisticated capabilities including user
+                  permission management, role-based access control, and
+                  comprehensive inventory analytics dashboard to support
+                  data-driven business decisions.
+                </p>
+                <div class="tech-stack">
+                  <h4>Tech Stack:</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">Javascript</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Express</span>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="section contact fade-in" id="contact">
-            <div class="container">
-                <h2 class="section-title">Let's Connect !</h2>
-                <div class="contact-content">
-                    <form class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <label for="from_name">Name</label>
-                            <input type="text" id="from_name" name="from_name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="from_email">Email</label>
-                            <input type="email" id="from_email" name="from_email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Messages</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn" id="submit-btn">
-                            <span class="btn-text">Send Messages</span>
-                            <span class="btn-loading" style="display: none;">Sending...</span>
-                        </button>
-                    </form>
-                    
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <img src="assets/mail.png" alt="Email" class="contact-icon-img">
-                            </div>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <p>dimasaspt1@email.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <img src="assets/phone.png" alt="Phone" class="contact-icon-img">
-                            </div>
-                            <div class="contact-details">
-                                <h4>Phone Number</h4>
-                                <p>0812 2797 0111</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <img src="assets/location.png" alt="Location" class="contact-icon-img">
-                            </div>
-                            <div class="contact-details">
-                                <h4>Location</h4>
-                                <p>Tangerang, Indonesia</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="project-card">
+              <div class="project-image">
+                <img src="assets/accentwall.png" alt="Ecommerce Website" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">E-Commerce Website</h3>
+                <p class="project-description">
+                  Developing a static e-commerce website for Accent Wall, a wood
+                  panel company. The website features a comprehensive product
+                  catalog with detailed product descriptions and integrated
+                  WhatsApp-based sales system for streamlined customer
+                  transactions.
+                </p>
+                <div class="tech-stack">
+                  <h4>Tech Stack:</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">Javascript</span>
+                    <span class="tech-tag">Firebase</span>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="assets/payuliving.png"
+                  alt="Landing Page Payu Living"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Landing Page Website</h3>
+                <p class="project-description">
+                  Building a landing page to showcase Payu Living's brand
+                  portfolio, featuring affiliated brands and key competitive
+                  advantages to effectively communicate the company's value
+                  proposition to potential customers.
+                </p>
+                <div class="tech-stack">
+                  <h4>Tech Stack:</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">Bootstrap</span>
+                    <span class="tech-tag">Javascript</span>
+                    <span class="tech-tag">Firebase</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-image">
+                <img src="assets/uteen.png" alt="Corporate CMS Website" />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">
+                  Prototyping Canteen Ordering Mobile Application
+                </h3>
+                <p class="project-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  aliquid voluptatibus obcaecati ducimus impedit provident
+                  quibusdam, qui dolorum? Autem hic officiis nobis! Id impedit
+                  debitis omnis nemo consequatur magnam aspernatur?
+                </p>
+                <div class="tech-stack">
+                  <h4>Tech Stack:</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Figma</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; 2025 Dimas Adisaputra. All rights reserved.</p>
+      <!-- Contact Section -->
+      <section class="section contact fade-in" id="contact">
+        <div class="container">
+          <h2 class="section-title">Let's Connect !</h2>
+          <div class="contact-content">
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="from_name">Name</label>
+                <input type="text" id="from_name" name="from_name" required />
+              </div>
+              <div class="form-group">
+                <label for="from_email">Email</label>
+                <input
+                  type="email"
+                  id="from_email"
+                  name="from_email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Messages</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn" id="submit-btn">
+                <span class="btn-text">Send Messages</span>
+                <span class="btn-loading" style="display: none"
+                  >Sending...</span
+                >
+              </button>
+            </form>
+
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <img
+                    src="assets/mail.png"
+                    alt="Email"
+                    class="contact-icon-img"
+                  />
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <p>dimasaspt1@email.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <img
+                    src="assets/phone.png"
+                    alt="Phone"
+                    class="contact-icon-img"
+                  />
+                </div>
+                <div class="contact-details">
+                  <h4>Phone Number</h4>
+                  <p>0812 2797 0111</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <img
+                    src="assets/location.png"
+                    alt="Location"
+                    class="contact-icon-img"
+                  />
+                </div>
+                <div class="contact-details">
+                  <h4>Location</h4>
+                  <p>Tangerang, Indonesia</p>
+                </div>
+              </div>
+
+              <!-- Social Media Section -->
+              <div class="social-media-section">
+                <h3 class="social-title">Find Me On</h3>
+                <div class="social-links">
+                  <a
+                    href="https://www.linkedin.com/in/dimas-adisaputra-28935325a/"
+                    target="_blank"
+                    class="social-link"
+                  >
+                    <img
+                      src="assets/linkedin.png"
+                      alt="LinkedIn"
+                      class="social-icon"
+                    />
+                    <span>LinkedIn</span>
+                  </a>
+                  <a
+                    href="https://github.com/dimas-aspt"
+                    target="_blank"
+                    class="social-link"
+                  >
+                    <img
+                      src="assets/github.png"
+                      alt="GitHub"
+                      class="social-icon"
+                    />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href="https://instagram.com/dimas.aspt"
+                    target="_blank"
+                    class="social-link"
+                  >
+                    <img
+                      src="assets/instagram.png"
+                      alt="Instagram"
+                      class="social-icon"
+                    />
+                    <span>Instagram</span>
+                  </a>
+                  <a href="#" class="social-link" id="discord-link">
+                    <img
+                      src="assets/discord.png"
+                      alt="Discord"
+                      class="social-icon"
+                    />
+                    <span>Discord</span>
+                    <div class="discord-tooltip">Click to copy username</div>
+                  </a>
+                </div>
+              </div>
             </div>
-        </footer>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 Dimas Adisaputra. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
 
     <!-- Modal Notification -->
-    <div class="modal" id="notification-modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close-modal" id="close-modal">&times;</span>
-            <div class="modal-body">
-                <div class="modal-icon" id="modal-icon"></div>
-                <h3 id="modal-title"></h3>
-                <p id="modal-message"></p>
-            </div>
+    <div class="modal" id="notification-modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-modal" id="close-modal">&times;</span>
+        <div class="modal-body">
+          <div class="modal-icon" id="modal-icon"></div>
+          <h3 id="modal-title"></h3>
+          <p id="modal-message"></p>
         </div>
+      </div>
     </div>
 
     <script src="scripts/script.js"></script>
-</body>
+  </body>
 </html>

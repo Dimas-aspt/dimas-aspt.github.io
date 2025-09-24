@@ -298,3 +298,38 @@ window.addEventListener("scroll", () => {
     shape.style.transform = `translateY(${scrolled * speed}px)`;
   });
 });
+
+// Updated Discord functionality
+document.getElementById('discord-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Ganti dengan username Discord baru Anda
+    const discordUsername = '@dimasaspt';
+    
+    // Copy to clipboard
+    navigator.clipboard.writeText(discordUsername).then(() => {
+        showNotification(
+            'success', 
+            'Discord Username Copied!', 
+            `${discordUsername} has been copied to clipboard! You can now add me on Discord.`
+        );
+    }).catch(err => {
+        // Fallback jika clipboard tidak support
+        showNotification(
+            'success',
+            'My Discord Username',
+            `My Discord: ${discordUsername}\n\nPlease copy this username manually to add me.`
+        );
+    });
+});
+
+// Hover effect untuk social links
+document.querySelectorAll('.social-link').forEach(link => {
+    link.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-3px)';
+    });
+    
+    link.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+    });
+});
